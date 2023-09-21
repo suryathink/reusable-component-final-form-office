@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+// import "./styles.css";
+import MyForm from "./Components/Form";
+import React from "react";
 
-function App() {
+const App = () => {
+  const fields = [
+    { name: "field1", label: "Name", type: "text" },
+    { name: "field2", label: "Last Name", type: "text" },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <MyForm fields={fields} initialValues={{}} />
     </div>
   );
-}
+};
 
 export default App;
